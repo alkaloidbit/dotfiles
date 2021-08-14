@@ -77,6 +77,9 @@ alias -g G=" | grep"
 # Colorls
 alias cls="colorls"
 
+# Bat
+alias b="bat"
+
 # exa 
 alias ls="exa"
 
