@@ -2,6 +2,9 @@ set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath = &runtimepath
 let mapleader=","   
 
+let g:node_client_debug = 0
+let $NODE_CLIENT_LOG_FILE = '/home/fred-badlieutenant/.config/nvim/logs/nodefile'
+
 " plugins {{{
 call plug#begin('~/.vim-plug/plugged')
 

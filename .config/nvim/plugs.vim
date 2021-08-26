@@ -1,5 +1,5 @@
 " Vim Plug  {{{
-Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+Plug 'neoclide/coc.nvim', { 'branch': 'master', 'do': 'yarn install --frozen-lockfile' }
 Plug 'ervandew/supertab'
 Plug 'SirVer/ultiSnips'
 " Plug 'albanm/vuetify-vim'
@@ -19,6 +19,7 @@ Plug 'thinca/vim-qfreplace'
 Plug 'mboughaba/i3config.vim'
 Plug 'epilande/vim-es2015-snippets'
 Plug 'alvan/vim-closetag'
+Plug 'junegunn/vim-plug'
 Plug 'godlygeek/tabular'
 Plug 'haya14busa/is.vim'
 Plug 'honza/vim-snippets'
