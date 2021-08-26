@@ -8,7 +8,7 @@ let g:lightline = {
     \   'active': {
     \    'left' :[[ 'mode', 'paste' ],
     \             [ 'readonly', 'filename', 'modified',  'gitgutter', 'gutentags' ]],
-    \    'right': [[ 'filetype',  'lineinfo', 'percent' ], [ 'cocstatus' ]]
+    \    'right': [[ 'filetype',  'lineinfo', 'percent' ], [ 'currentFunction', 'cocstatus' ]]
     \   },
     \   'tabline': {
     \     'left': [ ['tabs'] ],
@@ -44,6 +44,7 @@ let g:lightline = {
     \     'modified': 'LightlineModified',
     \     'filetype': 'LightlineFiletype',
     \     'cocstatus': 'LightlineCoc',
+    \     'currentfunction': 'CocCurrentFunction'
     \   },
     \   'component_expand': {
     \     'buffers': 'lightline#bufferline#buffers',
@@ -83,11 +84,12 @@ function! LightlinePercent() abort
 endfunction
 
 function! LightlineTabName(n) abort
-    let bufnr = tabpagebuflist(a:n)[tabpagewinnr(a:n) - 1]
+    let l:bufnr = tabpagebuflist(a:n)[tabpagewinnr(a:n) - 1]
     let fname = expand('#' . bufnr . ':t')
-    let l:icon = WebDevIconsGetFileTypeSymbol()
+    " filetype icon
+    let l:icon = WebDevIconsGetFileTypeSymbol(bufname(l:bufnr))
     return fname =~ 'NERD_tree' ? 'EXPLORER' : 
-        \ ('' != fname ? fname : '[No Name]') 
+        \ ('' != fname ? l:icon.' '.fname : '[No Name]') 
 endfunction
 
 function! LightlineTabModified(n) abort
