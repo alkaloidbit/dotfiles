@@ -21,10 +21,9 @@ font-1 = "Font Awesome 5 Free:style=Solid:size=12;1"
 font-2 = "Font Awesome 5 Brands:size=10;1"
 font-3 = "Hack Nerd Font:style=Regular:size=10;1"
 font-4 = "Font Awesome 5 Free:style=Solid:size=18;1"
-modules-left = i3 
+modules-left = i3 test
 modules-center = 
-;modules-right = wlan xkeyboard backlight pulseaudio battery date
-modules-right =   backlight  xkeyboard battery pulseaudio date
+modules-right = backlight xkeyboard battery pulseaudio date
 
 tray-position = right
 tray-padding = 2
@@ -622,7 +621,17 @@ bar-indicator = |
 bar-fill = ─
 bar-empty = ─
 
-
+[module/test]
+type = custom/script
+exec = node $HOME/.config/polybar/App.js
+; format-prefix = "Test Node "
+format-foreground = #BF616A
+click-left = echo left >> $HOME/.config/polybar/events
+click-middle = echo middle >> $HOME/.config/polybar/events
+click-right = echo right >> $HOME/.config/polybar/events
+scroll-up = echo scrollUp >> $HOME/.config/polybar/events
+scroll-down = echo scrollDown >> $HOME/.config/polybar/events
+tail = true
 
 [module/title]
 type=internal/xwindow
