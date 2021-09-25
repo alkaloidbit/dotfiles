@@ -148,12 +148,11 @@ source $ZSH/oh-my-zsh.sh
 source $ZSH/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZSH/custom/plugins/forgit/forgit.plugin.zsh
 
-
 # User configuration
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-export LANG=fr_FR.UTF-8
+# export LANG=fr_FR.UTF-8
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then

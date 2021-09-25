@@ -60,6 +60,7 @@ nnoremap <Leader>so :source ~/.config/nvim/init.vim<CR>
 " }}}
 " <esc> is ;; {{{
 inoremap kj <Esc>
+inoremap KJ <Esc>
 " }}}
 " <esc> exit terminal-mode && Fzef buffers{{{
 tnoremap <expr> <Esc> (&filetype == "fzf") ? "<Esc>" : "<C-\><C-n>"

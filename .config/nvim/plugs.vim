@@ -32,6 +32,7 @@ Plug 'joshdick/onedark.vim'
 Plug 'luochen1990/rainbow'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'yuki-yano/fzf-preview.vim', { 'branch': 'release/remote', 'do': ':UpdateRemotePlugins' }
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'kshenoy/vim-signature'
@@ -77,4 +78,3 @@ Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-unimpaired'
 Plug 'vimwiki/vimwiki'
 " }}}
-" vim: foldmethod=marker:foldlevel=0:

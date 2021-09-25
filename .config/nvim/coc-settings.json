@@ -25,5 +25,6 @@
     "vetur.trace.server": "verbose",
     "vetur.dev.logLevel": "DEBUG",
     "snippets.ultisnips.enable": true,
-    "snippets.snipmate.enable": false
+    "snippets.snipmate.enable": false,
+    "browser.port": 8896
 }
