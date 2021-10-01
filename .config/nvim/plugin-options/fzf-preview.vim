@@ -12,7 +12,6 @@ augroup fzf_preview
 augroup END
 
 function! s:fzf_preview_settings() abort
-    echom 'Setting correct fzf_preview_command'
     let g:fzf_preview_grep_preview_cmd = 'COLORTERM=truecolor ' .g:fzf_preview_grep_preview_cmd
     let g:fzf_preview_command = 'COLORTERM=truecolor ' . g:fzf_preview_command 
 endfunction
