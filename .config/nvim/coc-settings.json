@@ -26,5 +26,6 @@
     "vetur.dev.logLevel": "DEBUG",
     "snippets.ultisnips.enable": true,
     "snippets.snipmate.enable": false,
-    "browser.port": 88
+    "browser.port": 8896,
+    "intelephense.licenceKey": "00S0TQCTNUAYL74",
 }

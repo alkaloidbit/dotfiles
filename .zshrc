@@ -12,7 +12,8 @@ export PATH=$HOME/.local/bin:$PATH
 
 ## My custom path for scripts
 export PATH=$HOME/Scripts:$PATH
-export PATH=$HOME/PhpStorm-201.6668.153/bin:$PATH
+export PATH=$HOME/bin/PhpStorm-212.5284.49/bin:$PATH
+
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/fred-badlieutenant/.oh-my-zsh"

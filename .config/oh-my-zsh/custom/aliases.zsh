@@ -53,7 +53,7 @@ alias i3rc="vim $HOME/.config/i3/config"
 
 # alias install="sudo apt-get install"
 
-alias cons="php bin/console " 
+alias pbc="php bin/console " 
 alias syst="symfony server:status"
 alias syse="symfony serve --allow-http --no-tls -d"
 alias systop="symfony server:stop"
@@ -102,3 +102,6 @@ alias susys="sudo systemctl"
 
 # Git english
 alias git='LANG=en_GB git'
+
+# Php Version
+# Alias php='/usr/bin/php72'
