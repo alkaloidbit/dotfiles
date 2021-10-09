@@ -118,7 +118,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-ZSH_CUSTOM=~/.config/oh-my-zsh/custom
+# ZSH_CUSTOM=~/.config/oh-my-zsh/custom
 
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
@@ -172,8 +172,8 @@ fi
 ##  FZF  ##
 ###########
 
-source /usr/share/fzf/completion.zsh
-source /usr/share/fzf/key-bindings.zsh
+# source /usr/share/fzf/completion.zsh
+# source /usr/share/fzf/key-bindings.zsh
 
 export FZF_DEFAULT_OPTS="
 --ansi
@@ -243,7 +243,9 @@ fi
 ###########
 
 # https://github.com/haifengkao/nfasd
-eval "$(register-python-argcomplete-menu nfasd)"
+# eval "$(register-python-argcomplete-menu nfasd)"
+
+
 # stop shell from beeping for every complete
 # optional but highly recommended
 setopt NO_LIST_BEEP
@@ -276,7 +278,7 @@ fpath=($fpath "/home/fred-badlieutenant/.zfunctions")
 # prompt spaceship
 
 # NVM
-source /usr/share/nvm/init-nvm.sh
+# source /usr/share/nvm/init-nvm.sh
 
 # export NVM_DIR="$HOME/.nvm"
 #' [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
