@@ -277,12 +277,15 @@ fpath=($fpath "/home/fred-badlieutenant/.zfunctions")
 # promptinit
 # prompt spaceship
 
+unalias t
+export PATH="$HOME/.npm/bin:$PATH"
+
 # NVM
 # source /usr/share/nvm/init-nvm.sh
 
-# export NVM_DIR="$HOME/.nvm"
-#' [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" ]]]
 
-export PATH="$HOME/.npm/bin:$PATH"
-unalias t
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
