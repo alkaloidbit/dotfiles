@@ -104,4 +104,4 @@ alias susys="sudo systemctl"
 alias git='LANG=en_GB git'
 
 # Php Version
-# Alias php='/usr/bin/php72'
+alias php='/usr/bin/php72'

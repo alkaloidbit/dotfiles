@@ -137,7 +137,7 @@ plugins=(
   git-prompt
   symfony
   symfony2
-  tmux
+  # tmux
   z
   zsh-autosuggestions
   zsh-syntax-highlighting
