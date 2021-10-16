@@ -81,7 +81,7 @@ alias cls="colorls"
 alias b="bat"
 
 # exa 
-alias ls="exa"
+# alias ls="exa"
 
 # Open vim session
 alias vss="vim -S ~/.vim/vim-sessions/"
