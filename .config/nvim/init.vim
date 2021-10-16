@@ -38,3 +38,5 @@ runtime macros/matchit.vim
 " highlight {{{
 runtime highlights.vim
 " }}}
+
+au BufRead,BufNewFile *.tpl set filetype=smarty
