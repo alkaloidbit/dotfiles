@@ -1,6 +1,7 @@
 " Configuration mappings {{{
 " misc {{{
 nnoremap gb :ls<CR>:b<Space>
+nnoremap ,z :Z<Space>
 " }}}
 " Search using 'normal' regex {{{
 nnoremap / /\v

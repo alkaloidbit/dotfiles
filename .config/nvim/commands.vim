@@ -12,7 +12,7 @@ function! Z(...)
         exec 'cd' fnameescape(path)
     endif
 endfunction
-nnoremap <leader>e :Z<Space>
+" nnoremap <leader>e :Z<Space>
 " }}}
 "
 " fasd {{{
@@ -29,7 +29,6 @@ augroup fasd
 augroup END
 command! FASD call fzf#run(fzf#wrap({'source': 'fasd -al', 'options': '--no-sort --tac --tiebreak=index'}))
 nnoremap <silent> <Leader>e :FASD<CR>
-let g:sneak#prompt = '❯'
 " }}}
 "
 " A command to close all Vim  buffers that are not currently visible
