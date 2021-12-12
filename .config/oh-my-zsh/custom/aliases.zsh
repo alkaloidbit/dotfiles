@@ -83,6 +83,8 @@ alias b="bat"
 # exa 
 # alias ls="exa"
 
+alias lsal="ls -al"
+
 # Open vim session
 alias vss="vim -S ~/.vim/vim-sessions/"
 alias r="ranger"

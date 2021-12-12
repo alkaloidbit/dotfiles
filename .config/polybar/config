@@ -22,7 +22,7 @@ font-2 = "Font Awesome 5 Brands:size=10;1"
 font-3 = "Hack Nerd Font:style=Regular:size=10;1"
 font-4 = "Font Awesome 5 Free:style=Solid:size=18;1"
 modules-left = i3 
-; modules-center = breaktimer 
+modules-center = breaktimer 
 modules-right = backlight xkeyboard battery pulseaudio date
 
 tray-position = right
@@ -637,8 +637,7 @@ tail = true
 type = custom/script
 format-prefix = "Break Timer "
 format-foreground = #ECEFF4
-exec = polybar-break-timer
-; exec = polybar-break-timer $HOME/.config/polybar/.env/break-timer 20
+;exec = polybar-break-timer $HOME/.config/polybar/.env/break-timer 20
 click-left = echo left >> $HOME/.config/polybar/.env/break-timer
 click-middle = echo middle >> $HOME/.config/polybar/.env/break-timer
 click-right = echo right >> $HOME/.config/polybar/.env/break-timer
