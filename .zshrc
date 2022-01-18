@@ -195,7 +195,9 @@ export FZF_CTRL_T_OPTS="
 --bind '?:toggle-preview'
 "
 
-export FZF_DEFAULT_COMMAND="fd --type file --color=always --hidden --exclude .git"
+# --exclude <pattern> ... Exclude entries that match the given glob pattern ( ... dont search in .git folder ... )
+# --no-ignore             Don not respect .(git/fd)ignore files
+export FZF_DEFAULT_COMMAND="fd --type file --color=always --hidden --exclude .git --no-ignore"
  
 export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
  
