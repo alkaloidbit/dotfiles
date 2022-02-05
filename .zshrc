@@ -267,7 +267,7 @@ setopt autopushd
 setopt pushdignoredups
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
-export BROWSER=/usr/bin/google-chrome
+export BROWSER=/usr/bin/google-chrome-stable
 
 test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
 
