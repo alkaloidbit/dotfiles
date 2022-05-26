@@ -28,15 +28,15 @@ alias n='nfasd -e nvim' # press n myPro<tab> to get n ~/myProject
 alias ff='pcmanfm'
 
 # Dotfiles
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-alias dst='dotfiles status'
-alias da='dotfiles add'
-alias ddi='dotfiles diff'
-alias dg='dotfiles graph'
-alias db='dotfiles branch'
-alias dch='dotfiles checkout'
-alias dcm='dotfiles commit -m'
-alias df='dotfiles'
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias dst='config status'
+alias da='config add'
+alias ddi='config diff'
+alias dg='config graph'
+alias db='config branch'
+alias dch='config checkout'
+alias dcm='config commit -m'
+alias df='config'
 
 # Rm vim tmp files
 alias rmv='rm -rf ~/.vim-tmp/* && rm -rf ~/.vim-tmp/.*'
