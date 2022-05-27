@@ -108,4 +108,4 @@ alias git='LANG=en_GB git'
 alias gg='git graph'
 
 # Php Version
-alias php='/usr/bin/php74'
+alias php='/usr/bin/php72'
