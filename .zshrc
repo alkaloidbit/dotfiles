@@ -153,7 +153,13 @@ source $ZSH/custom/plugins/forgit/forgit.plugin.zsh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=fr_FR.UTF-8
+# unset LC_TYPE
+# export LANG=en_US.UTF-8
+# export LC_TIME=fr_FR
+
+unset LANG
+source /etc/profile.d/locale.sh
+
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then

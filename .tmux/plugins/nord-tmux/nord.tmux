@@ -42,7 +42,7 @@ __load() {
   fi
 
   if [ -z "$date_format" ]; then
-    tmux set-environment -g NORD_TMUX_STATUS_DATE_FORMAT "%a, %h %d"
+    tmux set-environment -g NORD_TMUX_STATUS_DATE_FORMAT "%a %d %h"
   else
     tmux set-environment -g NORD_TMUX_STATUS_DATE_FORMAT "$date_format"
   fi
