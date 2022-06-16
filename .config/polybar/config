@@ -453,13 +453,13 @@ label-focused-foreground = ${xrdb:background:#c5c8c6}
 label-focused-background = ${xrdb:color4}
 label-focused-font = 3
 label-focused-padding = 2
-lkabel-focused-margin-right = 1
+label-focused-margin-right = 1
 
 label-unfocused = %icon%
 label-unfocused-background = ${xrdb:fadeColor:#5f6c85}
 label-unfocused-font = 3
 label-unfocused-padding = 2
-lkabel-unfocused-margin-right = 1
+label-unfocused-margin-right = 1
 
 label-urgent = %icon%  
 label-urgent-foreground = ${xrdb:foreground:#c5c8c6}
