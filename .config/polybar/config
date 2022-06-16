@@ -2,10 +2,10 @@
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
 width = 100%
-height = 30
+height = 25
 radius = 0
 fixed-center = true
-foreground = ${xrdb:foreground:#c6c8c6}
+foreground = ${xrdb:foreground:#c5c8c6}
 background = ${xrdb:background:#1d1f21}
 line-size = 1
 line-color = ${xrdb:foreground:#c5c8c6}
@@ -15,15 +15,16 @@ border-color = ${xrdb:foreground:#c5c8c6}
 ;module-margin-right = 2
 ;module-margin-left = 1
 ;module-margin-right = 2
-font-0 = "Hack Nerd Font:style=Bold:size=12;1"
+font-0 = "Hack Nerd Font:style=Bold:size=10;1"
 ;font-0 = "Source Code Pro Semibold:size=10;1"
-font-1 = "Font Awesome 5 Free:style=Solid:size=12;1"
+font-1 = "Font Awesome 5 Free:style=Solid:size=10;1"
 font-2 = "Font Awesome 5 Brands:size=10;1"
 font-3 = "Hack Nerd Font:style=Regular:size=10;1"
 font-4 = "Font Awesome 5 Free:style=Solid:size=18;1"
 modules-left = i3 
-modules-center = breaktimer 
-modules-right = backlight xkeyboard battery pulseaudio date
+modules-center = 
+;modules-right = wlan xkeyboard backlight pulseaudio battery date
+modules-right =   backlight  xkeyboard battery pulseaudio date
 
 tray-position = right
 tray-padding = 2
@@ -448,15 +449,17 @@ ws-icon-default = 
 
 
 label-focused = %icon% 
-label-focused-foreground = ${xrdb:foregroud:#c5c8c6}
-label-focused-background = ${xrdb:fadeColor}
+label-focused-foreground = ${xrdb:background:#c5c8c6}
+label-focused-background = ${xrdb:color4}
 label-focused-font = 3
 label-focused-padding = 2
+lkabel-focused-margin-right = 1
 
 label-unfocused = %icon%
-label-unfocused-foreground = ${xrdb:fadeColorAlt:#5f6c85}
+label-unfocused-background = ${xrdb:fadeColor:#5f6c85}
 label-unfocused-font = 3
 label-unfocused-padding = 2
+lkabel-unfocused-margin-right = 1
 
 label-urgent = %icon%  
 label-urgent-foreground = ${xrdb:foreground:#c5c8c6}
@@ -621,29 +624,7 @@ bar-indicator = |
 bar-fill = ─
 bar-empty = ─
 
-[module/test]
-type = custom/script
-exec = node $HOME/.config/polybar/App.js
-format-foreground = #ECEFF4
-click-left = echo left >> $HOME/.config/polybar/events
-click-middle = echo middle >> $HOME/.config/polybar/events
-click-right = echo right >> $HOME/.config/polybar/events
-scroll-up = echo scrollUp >> $HOME/.config/polybar/events
-scroll-down = echo scrollDown >> $HOME/.config/polybar/events
-tail = true
 
-; Polybar Break Timer
-[module/breaktimer]
-type = custom/script
-format-prefix = "Break Timer "
-format-foreground = #ECEFF4
-;exec = polybar-break-timer $HOME/.config/polybar/.env/break-timer 20
-click-left = echo left >> $HOME/.config/polybar/.env/break-timer
-click-middle = echo middle >> $HOME/.config/polybar/.env/break-timer
-click-right = echo right >> $HOME/.config/polybar/.env/break-timer
-scroll-up = echo scrollUp >> $HOME/.config/polybar/.env/break-timer
-scroll-down = echo scrollDown >> $HOME/.config/polybar/.env/break-timer
-tail = true
 
 [module/title]
 type=internal/xwindow

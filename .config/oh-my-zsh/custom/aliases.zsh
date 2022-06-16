@@ -106,6 +106,7 @@ alias susys="sudo systemctl"
 alias git='LANG=en_GB git'
 
 alias gg='git graph'
+alias gsts='git status -s'
 
 # Php Version
 alias php='/usr/bin/php72'
