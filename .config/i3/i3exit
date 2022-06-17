@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 lock() { 
-    light-locker-command -l
+    xlock 
 }
 
 case "$1" in 
