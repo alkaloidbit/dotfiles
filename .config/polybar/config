@@ -1,4 +1,5 @@
 [bar/i3wmthemer_bar]
+enable-ipc = true
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
 width = 100%
@@ -24,10 +25,10 @@ font-4 = "Font Awesome 5 Free:style=Solid:size=18;1"
 modules-left = i3 
 modules-center = 
 ;modules-right = wlan xkeyboard backlight pulseaudio battery date
-modules-right =   backlight  xkeyboard battery pulseaudio date
+modules-right =   backlight  xkeyboard battery pulseaudio date powermenu
 
-tray-position = right
-tray-padding = 2
+;tray-position = right
+;tray-padding = 2
 override-redirect = false
 ;wm-restack = i3
 cursor-click = pointer
@@ -448,26 +449,27 @@ ws-icon-4 = 5;
 ws-icon-default = 
 
 
-label-focused = %icon% 
+label-focused = %index% 
 label-focused-foreground = ${xrdb:background:#c5c8c6}
 label-focused-background = ${xrdb:color4}
-label-focused-font = 3
-label-focused-padding = 2
+;label-focused-font = 3
+label-focused-padding = 1
 label-focused-margin-right = 1
 
-label-unfocused = %icon%
+label-unfocused = %index%
 label-unfocused-background = ${xrdb:fadeColor:#5f6c85}
-label-unfocused-font = 3
-label-unfocused-padding = 2
+;label-unfocused-font = 3
+label-unfocused-padding = 1
 label-unfocused-margin-right = 1
 
-label-urgent = %icon%  
+label-urgent = %index%  
 label-urgent-foreground = ${xrdb:foreground:#c5c8c6}
 label-urgent-background = ${xrdb:color1:#9b0a20}
-label-urgent-font = 3
-label-urgent-padding = 2
+;label-urgent-font = 3
+label-urgent-padding = 1
+label-urgent-margin-right = 1
 
-label-visible = %icon%  
+label-visible = %index%  
 label-visible-foreground = ${xrdb:foreground:#c5c8c6}
 
 [module/wlan]
@@ -536,8 +538,8 @@ format-spacing = 1
 
 label-open-font = 2
 label-open = 
-label-open-foreground = ${xrdb:background:#c5c8c6}
-label-open-background = ${xrdb:color6:#282a2e}
+label-open-foreground = ${xrdb:foreground:#c5c8c6}
+label-open-background = ${xrdb:fadeColor:#282a2e}
 label-open-padding = 2
 
 label-close =  cancel
