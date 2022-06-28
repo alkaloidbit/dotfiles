@@ -17,11 +17,13 @@ export PATH=$HOME/bin/PhpStorm-212.5284.49/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/fred-badlieutenant/.oh-my-zsh"
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="spaceship"
+# ZSH_THEME="spaceship"
+ZSH_THEME="dracula"
 
 export RANGER_LOAD_DEFAULT_RC=false
 
@@ -174,16 +176,27 @@ fi
 
 # source /usr/share/fzf/completion.zsh
 # source /usr/share/fzf/key-bindings.zsh
+# REMOVED FROM BELOW BECAUSE "unknown option pointer --"  error...
+# --pointer='▶' --marker='✓'
+
+################
+## NORD COLOR ##
+################
+
+# --color fg:#D8DEE9,bg:#2E3440,hl:#8FBCBB,fg+:#D8DEE9,bg+:#434C5E,hl+:#8FBCBB
+# --color pointer:#BF616A,info:#4C566A,spinner:#4C566A,header:#4C566A,prompt:#81A1C1,marker:#EBCB8B,border:#616E88
 
 export FZF_DEFAULT_OPTS="
 --ansi
 --layout=reverse
---color fg:#D8DEE9,bg:#2E3440,hl:#8FBCBB,fg+:#D8DEE9,bg+:#434C5E,hl+:#8FBCBB
---color pointer:#BF616A,info:#4C566A,spinner:#4C566A,header:#4C566A,prompt:#81A1C1,marker:#EBCB8B,border:#616E88
 --height=50%
+--color=fg:#f9f8f2,bg:#282a36,hl:#bd93f9 
+--color=fg+:#f8f8f2,bg+:#44475a,hl+:#bd93f9 
+--color=info:#ffb86c,prompt:#50fa7b,pointer:#ff79c6 
+--color=marker:#ff79c6,spinner:#ffb86c,header:#6272a4
 --multi
 --preview '([[ -f {} ]] && (bat --style=numbers --color=always {} || cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2> /dev/null | head -200'
---prompt='~ ' --pointer='▶' --marker='✓'
+--prompt='~ ' 
 --bind '?:toggle-preview'
 --bind 'ctrl-b:select-all'
 --bind 'ctrl-e:execute(echo {+} | xargs -o nvim)'
@@ -269,7 +282,7 @@ setopt pushdignoredups
 export PATH="$PATH:$HOME/.rvm/bin"
 export BROWSER=/usr/bin/google-chrome
 
-test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
+test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors/dircolors)
 
 fpath=($fpath "/home/fred-badlieutenant/.zfunctions")
 
@@ -277,12 +290,12 @@ fpath=($fpath "/home/fred-badlieutenant/.zfunctions")
 # promptinit
 # prompt spaceship
 
-unalias t
 export PATH="$HOME/.npm/bin:$PATH"
+
+unalias t
 
 # NVM
 # source /usr/share/nvm/init-nvm.sh
-
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

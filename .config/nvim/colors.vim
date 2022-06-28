@@ -18,6 +18,7 @@ if exists('+termguicolors')
 endif
 
 syntax on
+" colorscheme dracula
 " colorscheme onedark
 colorscheme nord
 

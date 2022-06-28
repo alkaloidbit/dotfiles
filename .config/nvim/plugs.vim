@@ -17,6 +17,7 @@ Plug 'glidenote/memolist.vim'
 Plug 'thinca/vim-qfreplace'
 " Plug 'rafaqz/ranger.vim'
 Plug 'mboughaba/i3config.vim'
+Plug 'dracula/vim',{'as': 'dracula'}
 Plug 'epilande/vim-es2015-snippets'
 Plug 'alvan/vim-closetag'
 Plug 'junegunn/vim-plug'

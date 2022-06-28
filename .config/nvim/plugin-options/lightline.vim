@@ -4,7 +4,7 @@
 " 'left': [['explorer_pad'], ['buffers']],
 " }
 let g:lightline = {
-    \   'colorscheme': 'nord_subtle',
+    \   'colorscheme': 'nord',
     \   'active': {
     \    'left' :[[ 'mode', 'paste' ],
     \             [ 'readonly', 'filename', 'modified',  'gitgutter', 'gutentags' ]],
