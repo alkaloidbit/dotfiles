@@ -142,6 +142,7 @@ plugins=(
   symfony2
   # tmux
   z
+  zsh-interactive-cd
   zsh-autosuggestions
   zsh-syntax-highlighting
 )

@@ -12,7 +12,7 @@ function! Z(...)
         exec 'cd' fnameescape(path)
     endif
 endfunction
-" nnoremap <leader>e :Z<Space>
+nnoremap <leader>e :Z<Space>
 " }}}
 "
 " fasd {{{
@@ -28,7 +28,7 @@ augroup fasd
   autocmd BufWinEnter,BufFilePost * call s:fasd_update()
 augroup END
 command! FASD call fzf#run(fzf#wrap({'source': 'fasd -al', 'options': '--no-sort --tac --tiebreak=index'}))
-nnoremap <silent> <Leader>e :FASD<CR>
+" nnoremap <silent> <Leader>e :FASD<CR>
 " }}}
 "
 " A command to close all Vim  buffers that are not currently visible
