@@ -14,6 +14,10 @@ export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/Scripts:$PATH
 export PATH=$HOME/bin/PhpStorm-212.5284.49/bin:$PATH
 
+# export MANPATH=/usr/share/man:$MANPATH
+
+export DOTBARE_DIR="$HOME/.cfg"
+export DOTBARE_TREE="$HOME"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/fred-badlieutenant/.oh-my-zsh"
@@ -32,7 +36,7 @@ export RANGER_LOAD_DEFAULT_RC=false
 FORGIT_COPY_CMD='xclip -selection clipboard'
 
 # CUSTOMIZE SPACESHIP
-SPACESHIP_NODE_DEFAULT_VERSION="v11.14.0"
+# SPACESHIP_NODE_DEFAULT_VERSION="v11.14.0"
 SPACESHIP_PROMPT_ORDER=(
 #  time          # Time stamps section
   user          # Username section
@@ -69,13 +73,6 @@ SPACESHIP_PROMPT_ORDER=(
   char          # Prompt character
 )
 
-###############
-## Functions ##
-###############
-
-function tmw {
-    tmux split-window -dh "$*"
-}
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to l a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
@@ -97,6 +94,9 @@ function tmw {
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
+
+# vivid see https://github.com/sharkdp/vivid
+export LS_COLORS="$(vivid generate nord)"
 
 # Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
@@ -134,14 +134,14 @@ plugins=(
   docker-compose
   extract
   fasd
+  dotbare
   forgit
   git
   gitignore
   git-prompt
   symfony
   symfony2
-  # tmux
-  z
+  zsh-z
   zsh-interactive-cd
   zsh-autosuggestions
   zsh-syntax-highlighting
@@ -167,9 +167,9 @@ source /etc/profile.d/locale.sh
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
+  export EDITOR='nvim'
 else
-  export EDITOR='vim'
+  export EDITOR='nvim'
 fi
 
 # Compilation flags
@@ -205,9 +205,13 @@ export FZF_CTRL_T_OPTS="
 --bind '?:toggle-preview'
 "
 
+
+# zsh example
+bindkey -s '^g' "dotbare fedit"^j
+
 # --exclude <pattern> ... Exclude entries that match the given glob pattern ( ... dont search in .git folder ... )
 # --no-ignore             Don not respect .(git/fd)ignore files
-export FZF_DEFAULT_COMMAND="fd --type file --color=always --hidden --exclude .git --no-ignore"
+export FZF_DEFAULT_COMMAND="fd --type file --color=always --hidden --exclude .git "
  
 export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
  
@@ -233,6 +237,20 @@ function t() {
     cd "$fasdlist"
 }
 
+# vf - fuzzy open with vim from anywhere
+# ex: vf word1 word2 ... (even part of a file name)
+# zsh autoload function
+# function vf() {
+  # local files
+# 
+  # files=(${(f)"$(locate -Ai -0 $@ | grep -z -vE '~$' | fzf --read0 -0 -1 -m)"})
+# 
+  # if [[ -n $files ]]
+  # then
+     # vim -- $files
+     # print -l $files[1]
+  # fi
+# }
 ############
 ## Ranger ##
 ############
@@ -281,7 +299,10 @@ export BROWSER=/usr/bin/google-chrome-stable
 
 test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
 
-fpath=($fpath "/home/fred-badlieutenant/.zfunctions")
+# export FPATH="$HOME/.zfunctions/autoload/:$FPATH"
+# autoload -U vf
+# autoload -U man-find
+# autoload -U fe
 
 # autoload -Uz promptinit; 
 # promptinit
@@ -290,9 +311,7 @@ fpath=($fpath "/home/fred-badlieutenant/.zfunctions")
 # NVM
 source /usr/share/nvm/init-nvm.sh
 
-# export NVM_DIR="$HOME/.nvm"
-#' [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" ]]]
 
 export PATH="$HOME/.npm/bin:$PATH"
 unalias t
+

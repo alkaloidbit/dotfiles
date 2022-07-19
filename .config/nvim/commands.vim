@@ -52,5 +52,11 @@ function! CloseHiddenBuffers()
   endfor
   echon "Deleted " . l:tally . " buffers"
 endfun
-"
+
+" Define a custom vim command to select dotfiles using fzf.vim
+command! Dots call fzf#run(fzf#wrap({
+  \ 'source': 'dotbare ls-files --full-name --directory "${DOTBARE_TREE}" | awk -v home="${DOTBARE_TREE}/" "{print home \$0}"',
+  \ 'sink': 'e',
+  \ 'options': [ '--multi', '--preview', 'cat {}' ]
+  \ }))
 " vim: foldmethod=marker:foldlevel=0:
