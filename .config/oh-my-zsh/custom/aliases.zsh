@@ -1,24 +1,19 @@
-alias vim="nvim"
-alias vnrc="vim -u NORC"
 
-alias zshrc="vim $HOME/.zshrc"
-alias vimrc="vim $HOME/.vimrc"
-alias nvimrc="vim $HOME/.config/nvim/init.vim"
-alias tmuxrc="vim $HOME/.tmux.conf"
-alias aliasrc="vim $ZSH_CUSTOM/aliases.zsh"
-alias i3rc="vim $HOME/.config/i3/config"
-alias polyrc="vim $HOME/.config/polybar/config"
-alias rangerrc="vim $HOME/.config/ranger/rc.conf"
-alias ncmpcpprc="vim $HOME/.ncmpcpp/config"
-alias conkyrc="vim $HOME/.config/conky/conky.conf"
+alias vim="nvim"
+alias zshrc="$EDITOR $HOME/.zshrc"
+
+alias vimrc="$EDITOR $HOME/.vimrc"
+alias nvimrc="$EDITOR $HOME/.config/nvim/init.vim"
+alias tmuxrc="$EDITOR $HOME/.tmux.conf"
+alias aliasrc="$EDITOR $ZSH_CUSTOM/aliases.zsh"
+alias i3rc="$EDITOR $HOME/.config/i3/config"
+alias polyrc="$EDITOR $HOME/.config/polybar/config"
+alias rangerrc="$EDITOR $HOME/.config/ranger/rc.conf"
+alias ncmpcpprc="$EDITOR $HOME/.ncmpcpp/config"
+alias conkyrc="$EDITOR $HOME/.config/conky/conky.conf"
 
 alias xx="exit"
 alias src="source $HOME/.zshrc"
-
-# fasd related
-alias v='f -e nvim' # quick opening files with vim
-alias m='f -e cmus' # quick opening files with cmus
-alias o='a -e xdg-open' # quick opening files with xdg-open
 
 # nfasd
 alias n='nfasd -e nvim' # press n myPro<tab> to get n ~/myProject
@@ -38,6 +33,9 @@ alias dch='config checkout'
 alias dcm='config commit -m'
 alias df='config'
 
+alias config=dotbare
+alias dot=dotbare
+
 # Rm vim tmp files
 alias rmv='rm -rf ~/.vim-tmp/* && rm -rf ~/.vim-tmp/.*'
 
@@ -49,7 +47,6 @@ alias tls='tmux list-sessions'
 alias tks='tmux kill-server'
 alias tmn="tmux new -t"
 
-alias i3rc="vim $HOME/.config/i3/config"
 
 # alias install="sudo apt-get install"
 
@@ -60,15 +57,15 @@ alias systop="symfony server:stop"
 
 
 # open all git modified files 
-alias vgm="vim \$(git status --porcelain | awk '{print $2}')"
+alias vgm="$EDITOR \$(git status --porcelain | awk '{print $2}')"
 
 # Suffix alias 
 # alias -s [file-extension]=[name-of-app]
-alias -s php=vim
-alias -s css=vim
-alias -s scss=vim
-alias -s twig=vim
-alias -s txt=vim
+alias -s php=$EDITOR
+alias -s css=$EDITOR
+alias -s scss=$EDITOR
+alias -s twig=$EDITOR
+alias -s txt=$EDITOR
 
 
 # Global alias
@@ -80,19 +77,8 @@ alias cls="colorls"
 # Bat
 alias b="bat"
 
-# exa 
-# alias ls="exa"
-
 alias lsal="ls -al"
-
-# Open vim session
-alias vss="vim -S ~/.vim/vim-sessions/"
 alias r="ranger"
-
-# fzf 
-alias vf="vim \$(fzf)"
-alias -g Z="| fzf"
-alias f="fzf"
 
 # xclip
 alias pbcopy='xclip -selection clipboard'
@@ -110,3 +96,10 @@ alias gsts='git status -s'
 
 # Php Version
 alias php='/usr/bin/php72'
+
+# emoji-fzf
+alias emoj="emoji-fzf preview | fzf -m --preview "emoji-fzf get --name {1}" | cut -d " " -f 1 | emoji-fzf get"
+
+# Z integration
+alias j=z
+alias jj=zz
