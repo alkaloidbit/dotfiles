@@ -24,17 +24,18 @@ alias ff='pcmanfm'
 
 # Dotfiles
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-alias dst='config status'
-alias da='config add'
-alias ddi='config diff'
-alias dg='config graph'
-alias db='config branch'
-alias dch='config checkout'
-alias dcm='config commit -m'
-alias df='config'
 
 alias config=dotbare
 alias dot=dotbare
+
+alias dst='dot fstat'
+alias de='dot fedit'
+alias da='dot fadd'
+alias dl='dot flog'
+alias ddi='dot diff'
+alias dg='dot graph'
+alias db='dot branch'
+alias dcm='dot commit -v'
 
 # Rm vim tmp files
 alias rmv='rm -rf ~/.vim-tmp/* && rm -rf ~/.vim-tmp/.*'
