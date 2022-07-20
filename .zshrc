@@ -6,8 +6,8 @@
 #(_)____|____/|_| |_|_| \_\\____|
 #
 
-# If you come from bash you might have to change your $PATH.  
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+# If you come from bash you might have to change your $PATH.
+# PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 
 ## My custom path for scripts
@@ -275,8 +275,8 @@ setopt NO_LIST_BEEP
 # Example aliases
 # alias zsahconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-setopt autocd 
-setopt autopushd 
+setopt autocd
+setopt autopushd
 setopt pushdignoredups
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
@@ -286,7 +286,9 @@ test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors/dircolors)
 
 fpath=($fpath "/home/fred-badlieutenant/.zfunctions")
 
-# autoload -Uz promptinit; 
+eval "$(zoxide init zsh)"
+
+# autoload -Uz promptinit;
 # promptinit
 # prompt spaceship
 
