@@ -28,4 +28,5 @@
     "snippets.snipmate.enable": false,
     "browser.port": 8896,
     "intelephense.licenceKey": "00S0TQCTNUAYL74",
+    "intelephense.client.diagnosticsIgnoreErrorFeature": true,
 }

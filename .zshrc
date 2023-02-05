@@ -163,6 +163,10 @@ source $ZSH/custom/plugins/forgit/forgit.plugin.zsh
 
 unset LANG
 source /etc/profile.d/locale.sh
+#Locales https://memo-linux.com/resoudre-lerreur-perl-warning-setting-locale-failed/
+export LANGUAGE=fr_FR.UTF-8
+export LANG=fr_FR.UTF-8
+export LC_ALL=fr_FR.UTF-8
 
 
 # Preferred editor for local and remote sessions
@@ -198,6 +202,12 @@ export FZF_DEFAULT_OPTS="
 --bind 'ctrl-b:select-all'
 --bind 'ctrl-e:execute(echo {+} | xargs -o nvim)'
 "
+
+# NVIM MINIMALIST
+# https://alpha2phi.medium.com/neovim-for-minimalists-init-lua-b978752686e8
+NVIM_MINIMALIST=~/.config/nvim-minimalist
+export NVIM_MINIMALIST
+alias nvmm='XDG_DATA_HOME=$NVIM_MINIMALIST/share XDG_CACHE_HOME=$NVIM_MINIMALIST XDG_CONFIG_HOME=$NVIM_MINIMALIST nvim'
 
 export FZF_CTRL_T_OPTS="
 --ansi

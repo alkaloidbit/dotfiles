@@ -18,9 +18,9 @@ if exists('+termguicolors')
 endif
 
 syntax on
+" colorscheme sobrio
 " colorscheme onedark
 colorscheme nord
-
 " OneDark theme options {{{
 let g:onedark_termcolors = 256
 let g:onedark_hide_endofbuffer = 1
